@@ -13,7 +13,7 @@ namespace MinecraftCommandHelper.BasicClass.Blocks.Special
         int maxsize = 0;
 
 
-        List<Items> items = new List<Items>();
+        List<BasicClass.Items.Items> items = new List<Items.Items>();
 
         #endregion
         enum ChestSize
@@ -38,8 +38,9 @@ namespace MinecraftCommandHelper.BasicClass.Blocks.Special
             StringBuilder sb = new StringBuilder();
             foreach (var item in items)
             {
-                sb.Append()
+                sb.Append(item);
             }
+            return sb.ToString();
         }
 
     }

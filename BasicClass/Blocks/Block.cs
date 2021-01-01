@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MinecraftCommandHelper.BasicClass
+namespace MinecraftCommandHelper.BasicClass.Blocks
 {
     class Block
     {

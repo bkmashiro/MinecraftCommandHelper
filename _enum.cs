@@ -1,6 +1,6 @@
-﻿namespace MinecraftCommandHelper.Enums
+﻿namespace MinecraftCommandHelper
 {
-   public static class _Enums
+   public class _Enums
     {
         #region MyRegion
 
@@ -1092,6 +1092,94 @@
                                     "猪"
                                  };
 
+        public enum _entity_id
+        {
+            player,
+            tnt,
+            ocelot,
+            polar_bear,
+            bat,
+            boat,
+            evocation_illager,
+            evocation_fangs,
+            illusion_illager,
+            vindication_illager,
+            villager,
+            egg,
+            wither,
+            wither_skull,
+            falling_block,
+            silverfish,
+            ghast,
+            painting,
+            dragon_fireball,
+            small_fireball,
+            fireball,
+            chicken,
+            spectral_arrow,
+            arrow,
+            giant,
+            husk,
+            zombie,
+            zombie_villager,
+            zombie_pigman,
+            xp_bottle,
+            xp_orb,
+            wither_skeleton,
+            stray,
+            skeleton,
+            tnt_minecart,
+            furnace_minecart,
+            hopper_minecart,
+            commandblock_minecart,
+            spawner_minecart,
+            chest_minecart,
+            minecart,
+            armor_stand,
+            wolf,
+            blaze,
+            zombie_horse,
+            skeleton_horse,
+            mule,
+            donkey,
+            horse,
+            mooshroom,
+            ender_dragon,
+            endermite,
+            enderman,
+            ender_crystal,
+            ender_pearl,
+            eye_of_ender_signal,
+            vex,
+            cow,
+            witch,
+            creeper,
+            shulker,
+            shulker_bullet,
+            lightning_bolt,
+            slime,
+            elder_guardian,
+            guardian,
+            leash_knot,
+            villager_golem,
+            rabbit,
+            item,
+            item_frame,
+            snowball,
+            snowman,
+            fireworks_rocket,
+            magma_cube,
+            sheep,
+            llama,
+            llama_spit,
+            potion,
+            area_effect_cloud,
+            squid,
+            parrot,
+            cave_spider,
+            spider,
+            pig
+        }
         public static string[] entities_name_limited = {
             "minecraft:player",
             "minecraft:tnt",
@@ -2732,5 +2820,7 @@
         };
 
         #endregion
+
+        public static string GetIdByName(int id) => entities_name_limited[id];
     }
 }

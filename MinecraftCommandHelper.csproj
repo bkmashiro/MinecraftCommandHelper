@@ -63,13 +63,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ASTBase.cs" />
     <Compile Include="BasicClass\Blocks\Block.cs" />
     <Compile Include="BasicClass\Blocks\Special\Chest.cs" />
     <Compile Include="BasicClass\Entities\Entities.cs" />
+    <Compile Include="BasicClass\Entities\Feedable.cs" />
+    <Compile Include="BasicClass\Entities\mobs.cs" />
+    <Compile Include="BasicClass\Entities\Odds\Leash.cs" />
+    <Compile Include="BasicClass\Others\Attributes.cs" />
+    <Compile Include="BasicClass\Others\PosionEffects.cs" />
     <Compile Include="BasicClass\Items\Item.cs" />
-    <Compile Include="BasicClass\Items\Prop\Enchant.cs" />
+    <Compile Include="BasicClass\Items\Proper\Enchant.cs" />
     <Compile Include="BasicClass\Others\Json.cs" />
-    <Compile Include="enum.cs" />
+    <Compile Include="BasicClass\Others\SingleAttribute.cs" />
+    <Compile Include="ColorfulTextBase.cs" />
+    <Compile Include="_enum.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

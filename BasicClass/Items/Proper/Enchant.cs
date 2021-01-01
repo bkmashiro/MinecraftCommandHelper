@@ -2,7 +2,7 @@
 using System.Text;
 using System;
 
-namespace MinecraftCommandHelper.BasicClass.Items.Prop
+namespace MinecraftCommandHelper.BasicClass.Items.Proper
 {
     public class Enchant
     {

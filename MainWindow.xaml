@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MinecraftCommandHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="741" Width="1200">
+        Title="MainWindow" Height="741" Width="1200" Loaded="mainwindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="411*"/>
