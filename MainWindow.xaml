@@ -16,7 +16,7 @@
             <RowDefinition Height="113*"/>
         </Grid.RowDefinitions>
         <WrapPanel HorizontalAlignment="Left" Height="113" Grid.Row="1" VerticalAlignment="Top" Width="822" Background="#FFE49E9E"/>
-        <Frame Content="Frame" Grid.Column="1" HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="370" Grid.RowSpan="2" Background="#FF837BD1"/>
+        <Frame x:Name="cmd" Content="Frame" Grid.Column="1" HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="370" Grid.RowSpan="2" Background="#FF837BD1"/>
         <Frame Content="Frame" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="822" Background="#FFE6DF96"/>
 
     </Grid>

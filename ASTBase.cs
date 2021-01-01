@@ -5,5 +5,6 @@
     /// </summary>
     class ASTBase
     {
+
     }
 }

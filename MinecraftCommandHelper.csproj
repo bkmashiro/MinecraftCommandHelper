@@ -76,12 +76,21 @@
     <Compile Include="BasicClass\Items\Proper\Enchant.cs" />
     <Compile Include="BasicClass\Others\Json.cs" />
     <Compile Include="BasicClass\Others\SingleAttribute.cs" />
+    <Compile Include="BuildingBlockBase.cs" />
     <Compile Include="ColorfulTextBase.cs" />
+    <Compile Include="pv.cs" />
+    <Compile Include="RichTextView.xaml.cs">
+      <DependentUpon>RichTextView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="_enum.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RichTextView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

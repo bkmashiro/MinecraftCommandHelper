@@ -15,6 +15,10 @@ namespace MinecraftCommandHelper
 
         private void mainwindow_Loaded(object sender, RoutedEventArgs e)
         {
+            cmd.Content = new RichTextView();
+
+
+
             Entities.Entities entities = new Entities.Entities();
             Entities.mobs mobs = new Entities.mobs();
             Entities.Feedable feedable = new Entities.Feedable();
