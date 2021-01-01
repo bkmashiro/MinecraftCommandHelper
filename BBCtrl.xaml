@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="MinecraftCommandHelper.BBCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MinecraftCommandHelper"
+             mc:Ignorable="d" 
+             d:DesignHeight="84.438" d:DesignWidth="250.72">
+    <WrapPanel MouseDown="WrapPanel_MouseDown" MouseMove="WrapPanel_MouseMove" MouseUp="WrapPanel_MouseUp" Cursor="SizeAll" MouseLeftButtonUp="WrapPanel_MouseLeftButtonUp">
+        <Viewbox x:Name="v1" Width="48" Height="48">
+            <Canvas Width="24" Height="24">
+                <Path x:Name="p1" Fill="White" Data="M12.08,4.08L20,12L12.08,19.92L10.67,18.5L16.17,13H2V11H16.17L10.67,5.5L12.08,4.08M20,12V22H22V2H20V12Z" Stroke="#FF75AEF1" />
+            </Canvas>
+        </Viewbox>
+        <TextBlock x:Name="t1" TextWrapping="Wrap" Text="TextBlock" FontSize="25" Background="#FFACACAC"/>
+        <Viewbox x:Name="v2" Width="48" Height="48" RenderTransformOrigin="0.5,0.5" FlowDirection="RightToLeft">
+            <Viewbox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="-1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Viewbox.RenderTransform>
+            <Canvas Width="24" Height="24" FlowDirection="RightToLeft">
+                <Path x:Name="p2" Fill="White" Data="M 0,8 16,8 16,16 0,16 Z" Stroke="#FFFFD06C" />
+            </Canvas>
+        </Viewbox>
+
+    </WrapPanel>
+</UserControl>

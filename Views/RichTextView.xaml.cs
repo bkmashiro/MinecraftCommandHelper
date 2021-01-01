@@ -24,5 +24,10 @@ namespace MinecraftCommandHelper
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            pv.cmd_RichTextView = rt;
+        }
     }
 }

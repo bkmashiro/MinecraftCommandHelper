@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace MinecraftCommandHelper.Entities
 {
@@ -98,52 +98,8 @@ namespace MinecraftCommandHelper.Entities
             }
         }
 
-        #region Discard
+
         #region DefaultSettings
-
-        //private bool is_id_Default = true;
-        //private bool is_Motion_Default = true;
-        //private bool is_Position_Default = true;
-        //private bool is_Rotation_Default = true;
-        //private bool is_UUIDLeast_Default = true;
-        //private bool is_UUIDMost_Default = true;
-        //private bool is_UUID_Default = true;
-        //private bool is_CustomName_Default = true;
-        //private bool is_CustomNameVisible_Default = false;
-        //private bool is_Silent_Default = true;
-        //private bool is_Health_Default = true;
-        //private bool is_Invulnerable_Default = false; //无敌
-        //private bool is_Air_Default = true;
-        //private bool is_Fire_Default = true;
-        //private bool is_OnGround_Default = true;
-        //private bool is_Dimension_Default = true;
-        //private bool is_PortalCooldown_Default = true;
-        //private bool is_FallDistance_Default = true;
-        //private bool is_Glowing_Default = true;
-        //private bool is_Tags_Default = true;
-        //private bool is_Passengers_Default = true;
-        #endregion
-        //public void SetPassengers(List<Entities> _Passengers) { is_Passengers_Default = false; Passengers = _Passengers; }
-        //public void SetPosition(double[] _postion) { is_Position_Default = false; Position = _postion; }
-        //public void SetPosition(double a, double b, double c) { is_Position_Default = false; Position = new double[] { a, b, c }; }
-        //public void SetRotation(double[] _rotation) { is_Rotation_Default = false; Rotation = _rotation; }
-        //public void SetRotation(double a, double b) { is_Rotation_Default = false; Rotation = new double[] { a, b}; }
-        //public void SetCustomName(string _name) { is_CustomName_Default = false;CustomName = _name; }
-        //public void SetInvulnerable(bool _Invulnerable) { is_Invulnerable_Default = false; Invulnerable = _Invulnerable; }
-        //public void SetCustomNameVisible(bool _CustomNameVisible) { is_CustomNameVisible_Default = false; CustomNameVisible = _CustomNameVisible; }
-        //public void SetSilent(bool _Silent) { is_Silent_Default = false; Silent = _Silent; }
-        //public void SetHealth(int _Health) { is_Health_Default = false; Health = _Health; }
-        //public void SetAir(int _Air) { is_Air_Default = false; Air = _Air; }
-        //public void SetFire(int _Fire) { is_Fire_Default = false; Fire = _Fire; }
-        //public void SetDimension(int _Dimension) { is_Dimension_Default = false; Dimension = _Dimension; }
-        //public void SetPortalCooldown(int _PortalCooldown) { is_PortalCooldown_Default = false; PortalCooldown = _PortalCooldown; }
-        //public void SetFallDistance(int _FallDistance) { is_FallDistance_Default = false; FallDistance = _FallDistance; }
-        //public void SetGlowing(bool _Glowing) { is_Glowing_Default = false; CustomNameVisible = _Glowing; }
-        //public void SetTags(List<string> _tags) { is_Tags_Default = false; Tags = _tags; }
-
-        //public void SetId(string _id) { is_id_Default = false; id = _id; }
-        //public void SetMotion(double[] _motion) { is_Motion_Default = false; Motion = _motion; }
-        //public void SetMotion(double a, double b, double c) { is_Motion_Default = false; Motion = new double[] { a, b, c }; }
 
         #endregion
         public string GetEntityNBT()
@@ -158,8 +114,48 @@ namespace MinecraftCommandHelper.Entities
 
         public string GetFullNBT()
         {
-            return $"";
+            return $"{GetEntityNBT()}";
         }
+
+        Paragraph _paragraph = new Paragraph();
+        ColorfulTextBase cb = new ColorfulTextBase();
+        public Paragraph GetColorNBT()
+        {
+            _paragraph.Inlines.Clear();
+
+            AddInLines(GetID(), pv.color_string);
+            AddInLines(GetMotion(), pv.color_array);
+            AddInLines(GetPosition(), pv.color_array);
+            AddInLines(GetRotation(), pv.color_array);
+            AddInLines(GetCustomName(), pv.color_string);
+            AddInLines(GetCustomNameVisible(),pv.color_bool);
+            AddInLines(GetSilent(), pv.color_bool);
+            AddInLines(GetHealth(), pv.color_int);
+            AddInLines(GetInvulnerable(), pv.color_bool);
+            AddInLines(GetAir(), pv.color_int);
+            AddInLines(GetFire(), pv.color_int);
+            AddInLines(GetOnGround(), pv.color_bool);
+            AddInLines(GetDimension(), pv.color_int);
+            AddInLines(GetPortalCooldown(), pv.color_int);
+            AddInLines(GetFallDistance(), pv.color_int);
+            AddInLines(GetGlowing(), pv.color_bool);
+            AddInLines(GetTags(), pv.color_array);
+            AddInLines(GetPassengers(), pv.color_odd);
+
+            return _paragraph;
+        }
+        private void AddInLines(string s, Brush a)
+        {
+
+            if (s != null)
+            {
+                s += '\r';
+                _paragraph.Inlines.Add(cb.GetRun(s, a));
+            }
+        }
+
+
+
 
 
     }

@@ -8,16 +8,22 @@
         Title="MainWindow" Height="741" Width="1200" Loaded="mainwindow_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="411*"/>
-            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="815*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="372*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="597*"/>
-            <RowDefinition Height="113*"/>
+            <RowDefinition Height="294*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="58*"/>
         </Grid.RowDefinitions>
-        <WrapPanel HorizontalAlignment="Left" Height="113" Grid.Row="1" VerticalAlignment="Top" Width="822" Background="#FFE49E9E"/>
-        <Frame x:Name="cmd" Content="Frame" Grid.Column="1" HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="370" Grid.RowSpan="2" Background="#FF837BD1"/>
-        <Frame Content="Frame" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="822" Background="#FFE6DF96"/>
+        <Frame x:Name="cmd" Content="Frame" Grid.Column="2" Grid.RowSpan="3" Background="#FF837BD1" NavigationUIVisibility="Hidden"/>
+        <Frame Content="Frame" Background="#FFE6DF96" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="wp" Grid.Row="2" Background="#FFE49E9E"/>
+        <GridSplitter HorizontalAlignment="Stretch" Grid.Row="1" Background="#FFCC9EF1"/>
+        <GridSplitter HorizontalAlignment="Stretch" Background="#FFC36CFF" Grid.Column="1" Grid.RowSpan="3"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="368,448,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="368,519,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

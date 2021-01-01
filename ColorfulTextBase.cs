@@ -8,8 +8,9 @@ namespace MinecraftCommandHelper
     /// <summary>
     /// 提供彩色文本的生成服务
     /// </summary>
-    class ColorfulTextBase
+   public class ColorfulTextBase
     {
+        
 
         public Run GetRun(string content, Brush foreground)
         {
@@ -26,12 +27,17 @@ namespace MinecraftCommandHelper
             return run;
         }
 
+
+
         public void PushRunTo(RichTextBox b,Run run)
         {
             Paragraph para = new Paragraph();
             para.Inlines.Add(run);
             b.Document.Blocks.Add(para);
         }
+
+
+
 
         public void AutoPush(object statement)
         {

@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MinecraftCommandHelper"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="RichTextView">
+      d:DesignHeight="710" d:DesignWidth="370"
+      Title="RichTextView" Width="Auto" Loaded="Page_Loaded">
 
-    <RichTextBox Background="#FFFBF9E9">
-        
-    </RichTextBox>
+    <Grid>
+        <RichTextBox x:Name="rt" Background="#FFDDF2F3"></RichTextBox>
+    </Grid>
 </Page>
