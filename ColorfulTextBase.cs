@@ -19,6 +19,7 @@ namespace MinecraftCommandHelper
             Run run = new Run(content);
             run.Foreground = Brushes.Aqua;
             return run;
+
         }
     }
 }
