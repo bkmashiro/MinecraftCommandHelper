@@ -78,6 +78,7 @@
     <Compile Include="BasicClass\Entities\Feedable.cs" />
     <Compile Include="BasicClass\Entities\mobs.cs" />
     <Compile Include="BasicClass\Entities\Odds\Leash.cs" />
+    <Compile Include="BasicClass\NBT.cs" />
     <Compile Include="BasicClass\Others\Attributes.cs" />
     <Compile Include="BasicClass\Others\PosionEffects.cs" />
     <Compile Include="BasicClass\Items\Item.cs" />
@@ -93,6 +94,7 @@
       <DependentUpon>BuildingBlockView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ColorfulTextBase.cs" />
+    <Compile Include="CommandRealizer\Command.cs" />
     <Compile Include="CommandRealizer\Experience.cs" />
     <Compile Include="CommandRealizer\Gamemode.cs" />
     <Compile Include="pv.cs" />

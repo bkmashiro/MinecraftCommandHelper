@@ -8,7 +8,7 @@ namespace MinecraftCommandHelper.Entities
     {
         string GetFullNBT(); //返还实体的最大NBT（忽略空值）
     }
-    public class Entities : IEntities
+    public class Entities : NBT, INBT, IEntities
     {
         //Properties
 
@@ -98,6 +98,8 @@ namespace MinecraftCommandHelper.Entities
             }
         }
 
+        public override string GetCaption() => "实体NBT";
+
 
         #region DefaultSettings
 
@@ -111,11 +113,27 @@ namespace MinecraftCommandHelper.Entities
                 $"{GetFallDistance()}{GetGlowing()}{GetTags()}{GetPassengers()}";
             return s;
         }
+        /// <summary>
+        /// b为false，不添加ID
+        /// </summary>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public string GetEntityNBT(bool b)
+        {
+            string s = "";
+            s = $"{(b ? GetID() : "")}{GetMotion()}{GetPosition()}{GetRotation()}{GetCustomName()}" +
+                $"{GetCustomNameVisible()}{GetSilent()}{GetHealth()}{GetInvulnerable()}" +
+                $"{GetAir()}{GetFire()}{GetOnGround()}{GetDimension()}{GetPortalCooldown()}" +
+                $"{GetFallDistance()}{GetGlowing()}{GetTags()}{GetPassengers()}";
+            return s;
+        }
 
-        public string GetFullNBT()
+        public virtual string GetFullNBT()
         {
             return $"{GetEntityNBT()}";
         }
+
+
 
         Paragraph _paragraph = new Paragraph();
         ColorfulTextBase cb = new ColorfulTextBase();
@@ -128,7 +146,7 @@ namespace MinecraftCommandHelper.Entities
             AddInLines(GetPosition(), pv.color_array);
             AddInLines(GetRotation(), pv.color_array);
             AddInLines(GetCustomName(), pv.color_string);
-            AddInLines(GetCustomNameVisible(),pv.color_bool);
+            AddInLines(GetCustomNameVisible(), pv.color_bool);
             AddInLines(GetSilent(), pv.color_bool);
             AddInLines(GetHealth(), pv.color_int);
             AddInLines(GetInvulnerable(), pv.color_bool);

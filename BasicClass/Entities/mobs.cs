@@ -38,11 +38,12 @@
         private string GetLeashed() => $"{(Leashed == null ? null : $"Leashed:{Leashed},")}";
         private string GetTeam() => $"{(Team == null ? null : $"Team:{Team},")}";
 
-        public new string GetFullNBT()
+        public override string GetFullNBT()
         {
             return "这是mobs的NBT";
         }
 
+        public override string GetCaption() => "生物NBT";
 
 
 

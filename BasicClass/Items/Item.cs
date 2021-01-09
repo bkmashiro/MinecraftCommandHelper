@@ -2,7 +2,7 @@
 
 namespace MinecraftCommandHelper.BasicClass.Items
 {
-    public class Items
+    public class Items:INBT
     {
         //名称
         string id = string.Empty;
@@ -48,6 +48,6 @@ namespace MinecraftCommandHelper.BasicClass.Items
             string s = "";
             return s;
         }
-
+        public string GetCaption() =>"物品NBT";
     }
 }

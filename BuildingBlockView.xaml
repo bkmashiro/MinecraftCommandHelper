@@ -6,25 +6,20 @@
       xmlns:local="clr-namespace:MinecraftCommandHelper"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="BuildingBlockView">
+      Title="BuildingBlockView" Loaded="Page_Loaded" Background="#FFC73434">
 
-    <Grid x:Name="BlockHolder" Background="#FF18DE3C">
-        <Grid HorizontalAlignment="Left" Height="100" Margin="399,94,0,0" VerticalAlignment="Top" Width="100" Background="Red">
-        </Grid>
-        <Viewbox HorizontalAlignment="Left" Height="100" Margin="197,32,0,0" VerticalAlignment="Top" Width="100">
-            <Canvas Height="100" Width="100" RenderTransformOrigin="0.5,0.5">
-                <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Canvas.Left="5" Canvas.Top="35"/>
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleY="1" ScaleX="1"/>
-                        <SkewTransform AngleY="0" AngleX="0"/>
-                        <RotateTransform Angle="0"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-            </Canvas>
-        </Viewbox>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="325,57,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    <Canvas x:Name="BlockHolder" Background="#FF18DE3C">
+        <Button Content="创建命令组" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click" Panel.ZIndex="10" Canvas.Left="392" Canvas.Top="77" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-2.521"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="添加命令块" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Panel.ZIndex="11" Canvas.Left="483" Canvas.Top="77"/>
 
-    </Grid>
+    </Canvas>
 </Page>

@@ -23,16 +23,32 @@ namespace MinecraftCommandHelper
         public BuildingBlockView()
         {
             InitializeComponent();
+
         }
+        BuildingBlockHostService buildingBlockHostService ;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BuildingBlockHostService buildingBlockHostService = new BuildingBlockHostService(BlockHolder);
+            buildingBlockHostService = new BuildingBlockHostService(BlockHolder);
             BuildingBlockGroup buildingBlockGroup = new BuildingBlockGroup(buildingBlockHostService);
             BuildingBlock buildingBlock = new BuildingBlock(buildingBlockGroup, BBShapes.poop, BBShapes.poop);
             buildingBlockGroup.DemoAllBlocks();
 
 
+
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            buildingBlockHostService = new BuildingBlockHostService(BlockHolder);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Entities.Feedable feedable = new Entities.Feedable();
+            BuildingBlockGroup buildingBlockGroup = new BuildingBlockGroup(buildingBlockHostService);
+            BuildingBlock buildingBlock = new BuildingBlock(buildingBlockGroup, BBShapes.poop, BBShapes.poop,feedable);
+            buildingBlock.Show();
         }
     }
 }

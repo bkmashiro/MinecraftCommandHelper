@@ -18,7 +18,7 @@
             <RowDefinition Height="58*"/>
         </Grid.RowDefinitions>
         <Frame x:Name="cmd" Content="Frame" Grid.Column="2" Grid.RowSpan="3" Background="#FF837BD1" NavigationUIVisibility="Hidden"/>
-        <Frame Content="Frame" Background="#FFE6DF96" NavigationUIVisibility="Hidden"/>
+        <Frame Content="Frame" NavigationUIVisibility="Hidden"/>
         <Frame x:Name="wp" Grid.Row="2" Background="#FFE49E9E"/>
         <GridSplitter HorizontalAlignment="Stretch" Grid.Row="1" Background="#FFCC9EF1"/>
         <GridSplitter HorizontalAlignment="Stretch" Background="#FFC36CFF" Grid.Column="1" Grid.RowSpan="3"/>

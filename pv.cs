@@ -32,6 +32,7 @@ namespace MinecraftCommandHelper
 
         public static Size building_block_size = new Size(70,50);
 
+        public static int Canvasindex = 1;
 
 
 

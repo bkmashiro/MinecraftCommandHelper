@@ -17,6 +17,8 @@
         private string GetSitting() => $"{(Sitting == null ? null : $"Sitting:{Sitting},")}";
 
         public string GetFeedableNBT() => $"{GetEntityNBT()}{GetInLove()}{GetAge()}{GetForcedAge()}{GetOwner()}{GetOwnerUUID()}{GetSitting()}";
-        public new string GetFullNBT() { return "这是Feedable的NBT"; }
+        public override string GetFullNBT() { return "这是Feedable的NBT"; }
+        public override string GetCaption() => "动物NBT";
+
     }
 }
